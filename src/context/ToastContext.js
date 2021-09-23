@@ -1,8 +1,8 @@
-import React, { createContext, useState, useContext, useCallback } from 'react';
+import React, { createContext, useState, useContext, useCallback } from "react";
 //gera um id único
-import { uuid } from 'uuidv4';
+import { uuid } from "uuidv4";
 
-import ToastContainer from '../components/ToastContainer';
+import ToastContainer from "../components/ToastContainer";
 
 const ToastContext = createContext();
 export function ToastProvider({ children }) {
@@ -14,7 +14,7 @@ export function ToastProvider({ children }) {
       id,
       type,
       title,
-      description,
+      description
     };
     setMessages(state => [...state, toast]);
   }, []);
@@ -34,7 +34,7 @@ export function ToastProvider({ children }) {
 export function useToast() {
   const context = useContext(ToastContext);
   if (!context) {
-    throw new Error('useToast must be used within a ToastProvider');
+    throw new Error("useToast must be used within a ToastProvider");
   }
   return context;
 }

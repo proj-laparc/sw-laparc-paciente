@@ -1,48 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import ReactPlayer from 'react-player/youtube';
+import React from "react";
+import { Link } from "react-router-dom";
+import ReactPlayer from "react-player/youtube";
 
-import {
-  Container,
-  ContentContainer,
-  TitleContainer,
-  IconButton,
-  StyledReactPlayer
-} from './styles';
-import { icons } from '../../assets';
- 
-export default function YoutubePlayer({ data, route }) {
+import { ContentContainer, TitleContainer } from "./styles";
+import { icons } from "../../assets";
+
+export default function YoutubePlayer({ data }) {
   return (
-    <Container>
-      <ContentContainer>
-        <TitleContainer>
-          <h1>{data.titulo}</h1>
-          <Link
-            to={{
-              pathname: route,
-              state: {
-                data,
-              },
-            }}
-          >
-            <IconButton>{icons.edit}</IconButton>
-          </Link>
-        </TitleContainer>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            marginTop: 10,
-          }}
-        >
-          <StyledReactPlayer
-            
-            controls={true}
-            key={data.id.toString()}
-            url={data.file_name}
-          />
-        </div>
-      </ContentContainer>
-    </Container>
+    <ContentContainer>
+      <TitleContainer>
+        <h2>{data.titulo}</h2>
+      </TitleContainer>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: 24,
+        }}
+      >
+        <ReactPlayer
+          width={"90%"}
+          height={195}
+          controls={true}
+          url={data.file_name}
+        />
+      </div>
+    </ContentContainer>
   );
 }

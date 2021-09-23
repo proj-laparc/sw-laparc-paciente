@@ -1,29 +1,27 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Document} from 'react-pdf';
-import Lottie from 'react-lottie';
-import { HiOutlineEmojiSad } from 'react-icons/hi';
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
-import * as pdfjs from 'pdfjs-dist/es5/build/pdf';
-import { pdfjsworker } from 'pdfjs-dist/es5/build/pdf.worker.entry';
+import React, { useState } from "react";
+import { Document, Page } from "react-pdf";
+import { Link } from "react-router-dom";
+import Lottie from "react-lottie";
+import { HiOutlineEmojiSad } from "react-icons/hi";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
-import Example from '../../assets/others/sample.pdf';
+import * as pdfjs from "pdfjs-dist/es5/build/pdf";
+import { pdfjsworker } from "pdfjs-dist/es5/build/pdf.worker.entry";
+
 import {
-  Container,
   ContentContainer,
   TitleContainer,
-  IconButton,
   PdfContainer,
   LoadingContainer,
   Subtitle,
   PaginationContainer,
-  StyledPage
-} from './styles';
-import { icons, animations } from '../../assets';
+} from "./styles";
+import { animations } from "../../assets";
+import Example from "../../assets/others/sample.pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjsworker;
 
-export default function PdfViewer({ data, route }) {
+export default function PdfViewer({ data }) {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [loading, setLoading] = useState(true);
@@ -42,8 +40,8 @@ export default function PdfViewer({ data, route }) {
             autoplay: true,
             animationData: animations.redLoadingBalls,
           }}
-          height={125}
-          width={125}
+          height={60}
+          width={60}
         />
         <Subtitle>Carregando...</Subtitle>
       </LoadingContainer>
@@ -53,66 +51,54 @@ export default function PdfViewer({ data, route }) {
   function renderError() {
     return (
       <LoadingContainer error>
-        <HiOutlineEmojiSad size={150} color={'#323c47'} />
-        <Subtitle style={{ marginTop: 22, color: '#323c47' }}>
+        <HiOutlineEmojiSad size={60} color={"#323c47"} />
+        <Subtitle style={{ marginTop: 10, color: "#323c47", fontSize: 11 }}>
           Erro ao carregar pdf...
         </Subtitle>
       </LoadingContainer>
     );
   }
- 
+
   return (
-    <Container>
-      <ContentContainer>
-        <TitleContainer>
-          <h1>{data.titulo}</h1>
-          <Link
-            to={{
-              pathname: route,
-              state: {
-                data,
-              },
+    <ContentContainer>
+      <TitleContainer>
+        <h2>{data.titulo}</h2>
+      </TitleContainer>
+      <PdfContainer>
+        <a
+          href={data[`${data.category}_url`]}
+          target="_blank"
+          style={{ textDecoration: "none" }}
+        >
+          <Document
+            error={renderError}
+            loading={renderLoader}
+            onLoadSuccess={onDocumentLoadSuccess}
+            file={{
+              url: data[`${data.category}_url`],
             }}
           >
-            <IconButton>{icons.edit}</IconButton>
-          </Link>
-        </TitleContainer>
-        <PdfContainer>
-          <div loading={loading}>
-            <Document
-              error={renderError}
-              loading={renderLoader}
-              onLoadSuccess={onDocumentLoadSuccess}
-              
-              file={{
-                url: `https://storage-fluxo.nyc3.digitaloceanspaces.com/laparc/${data.file_name}`,
-              }}
-            >
-              <StyledPage
-                pageNumber={pageNumber}
-                
-              />
-            </Document>
-          </div>
-          {loading === false && (
-            <PaginationContainer>
-              {pageNumber > 1 && (
-                <button onClick={() => setPageNumber(pageNumber - 1)}>
-                  <MdKeyboardArrowLeft color={'black'} />
-                </button>
-              )}
-              <p>
-                Página {pageNumber} de {numPages}
-              </p>
-              {pageNumber < numPages && (
-                <button onClick={() => setPageNumber(pageNumber + 1)}>
-                  <MdKeyboardArrowRight color={'black'} />
-                </button>
-              )}
-            </PaginationContainer>
+            <Page pageNumber={pageNumber} height={220} />
+          </Document>
+        </a>
+      </PdfContainer>
+      {loading === false && (
+        <PaginationContainer>
+          {pageNumber > 1 && (
+            <button onClick={() => setPageNumber(pageNumber - 1)}>
+              <MdKeyboardArrowLeft color={"black"} />
+            </button>
           )}
-        </PdfContainer>
-      </ContentContainer>
-    </Container>
+          <p>
+            Página {pageNumber} de {numPages}
+          </p>
+          {pageNumber < numPages && (
+            <button onClick={() => setPageNumber(pageNumber + 1)}>
+              <MdKeyboardArrowRight color={"black"} />
+            </button>
+          )}
+        </PaginationContainer>
+      )}
+    </ContentContainer>
   );
 }

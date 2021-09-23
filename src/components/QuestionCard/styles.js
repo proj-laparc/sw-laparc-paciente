@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -15,9 +15,6 @@ export const QuestionContainer = styled.div`
   min-height: 65px;
   border-bottom: 1.7px solid #ebeff290;
   word-wrap: break-word;
-  @media(max-width:640px){
-    padding: 10px 20px 10px 25px;
-  }
 
   p {
     font-weight: 500;
@@ -80,7 +77,7 @@ export const AnswerContainer = styled.div`
   }
 
   button {
-    background-color: transparent;
+    background-color: #ebeff2;
     height: 20px;
     transition: opacity 0.2s;
 
@@ -94,4 +91,10 @@ export const AnswerContainer = styled.div`
     filter: brightness(100%);
     opacity: 0.8;
   }
+`;
+export const ArrowButton = styled.button`
+  background-color: transparent;
+  color: #666666;
+  padding: 8px;
+  transform: rotateZ(${props => props.showAnswer? '0deg' : '180deg'});
 `;

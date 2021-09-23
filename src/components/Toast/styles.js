@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import { animated } from 'react-spring';
+import styled, { css } from "styled-components";
+import { animated } from "react-spring";
 
 const toastTypeVariations = {
   info: css`
@@ -13,7 +13,7 @@ const toastTypeVariations = {
   error: css`
     background-color: #fddede;
     color: #c53030;
-  `,
+  `
 };
 
 export const Container = styled(animated.div)`
@@ -24,7 +24,7 @@ export const Container = styled(animated.div)`
   /*sombra vai ficar com essa cor*/
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   display: flex;
-  ${props => toastTypeVariations[props.type || 'info']}
+  ${props => toastTypeVariations[props.type || "info"]}
   /*isso é pra estilizar apenas o ícone que está diretamente
   dentro da div, o ícone do botão não vai ser estilizado*/
   > svg {

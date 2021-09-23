@@ -10,7 +10,7 @@ const HamburgerBtn = styled(HamburgerMenu)`
   position: ${props=>props.open? "fixed":"absolute"} !important;
   cursor: pointer;
   left: 15px;
-  @media(max-width:800px){
+  @media(max-width:1000px){
     display: block;
   }
 `

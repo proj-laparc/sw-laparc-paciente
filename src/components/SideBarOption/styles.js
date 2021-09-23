@@ -21,11 +21,11 @@ export const Button = styled(Link)`
     fill: ${props =>
       props.fill &&
       (props.active || props.showSubOptions) &&
-      props.theme.colors.primary};
+      "#F7685B"};
     stroke: ${props =>
       props.stroke &&
       (props.active || props.showSubOptions) &&
-      props.theme.colors.primary};
+      "#F7685B"};
     transition: opacity(0.2) 0.2s;
     transition: stroke 0.2s;
   }
@@ -36,8 +36,8 @@ export const Button = styled(Link)`
     }
 
     path {
-      fill: ${props => props.fill && props.theme.colors.primary};
-      stroke: ${props => props.stroke && props.theme.colors.primary};
+      fill: ${props => props.fill && "#F7685B"};
+      stroke: ${props => props.stroke && "#F7685B"};
     }
   }
 `;

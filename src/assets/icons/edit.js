@@ -1,5 +1,5 @@
 import React from 'react';
- 
+
 const edit = (
   <svg
     width="24"

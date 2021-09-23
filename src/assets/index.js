@@ -1,51 +1,54 @@
+import edit from "./icons/edit";
 import admin from './icons/admin';
 import contents from './icons/contents';
-import patients from './icons/patients';
 import faq from './icons/faq';
 import logout from './icons/logout';
-import upload from './icons/upload';
-import edit from './icons/edit';
-import trash from './icons/trash';
+import contactUs from './icons/contactUs';
 import folder from './icons/folder';
-import config from './icons/config';
+import docs from './icons/docs';
+import patients from './icons/patients';
 
 export const images = {
-  arcosDaLapa: require('./images/arcosImage.jpg'),
+  arcosDaLapa: require("./images/arcosImage.jpg"),
+  laparcBackground: require("./images/laparcBackground.svg"),
 };
 
 export const icons = {
-  logoLaparc: require('./icons/laparcLogo.png'),
-  admin,
-  patients,
+  docs,
+  folder,
   contents,
   faq,
   logout,
-  upload,
-  pdf: require('./icons/pdf.svg'),
-  file: require('./icons/file.svg'),
-  audio: require('./icons/audio.svg'),
-  image: require('./icons/image.svg'),
+  admin,
+  patients,
+  contactUs,
+  logoLaparc: require("./icons/logoLaparc.svg"),
+  navBarLogo: require("./icons/navBarLogo.png"),
+  brazilian: require("./icons/brazilian.svg"),
+  spanish: require("./icons/spanish.svg"),
+  english: require("./icons/english.svg"),
+  dots: require("./icons/dots.svg"),
+  defaultUserImage: require("./icons/defaultUserImage.svg"),
+  pdf: require("./icons/pdf.svg"),
   edit,
-  trash,
-  folder,
-  config,
-  brazilian: require('./icons/brazilian.svg'),
-  spanish: require('./icons/spanish.svg'),
-  english: require('./icons/english.svg'),
+  plus: require("./icons/plus.svg"),
+  laparcLogo: require("./icons/laparcLogo.png"),
 };
 
 export const animations = {
-  loadingBalls: require('./animations/loadingBalls.json'),
-  programming: require('./animations/programming.json'),
-  doctor: require('./animations/doctor.json'),
-  heart: require('./animations/heart.json'),
-  medicine: require('./animations/medicine.json'),
-  redLoadingBalls: require('./animations/redLoadingBalls.json'),
-  atom: require('./animations/atom.json'),
-  new: require('./animations/new.json'),
-  audio: require('./animations/audio.json'),
+  loadingBalls: require("./animations/loadingBalls.json"),
+  programming: require("./animations/programming.json"),
+  heart: require("./animations/heart.json"),
+  doctor: require("./animations/doctor.json"),
+  doctorWriting: require("./animations/doctorWriting.json"),
+  audio: require("./animations/audio.json"),
+  redLoadingBalls: require("./animations/redLoadingBalls.json"),
+  new: require("./animations/new.json"),
+  pub: require("./animations/atom.json"),
 };
 
 export const others = {
-  document: require('./others/documento.docx'),
+  document: require("./others/sample.pdf"),
+  termsOfService: require("./others/termsOfService.pdf"),
+  privacyPolicy: require("./others/privacyPolicy.pdf"),
 };

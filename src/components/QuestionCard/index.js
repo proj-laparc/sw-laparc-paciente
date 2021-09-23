@@ -1,63 +1,47 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FiChevronUp, FiChevronDown } from 'react-icons/fi';
-import {HiPencil} from "react-icons/hi"
-import { Container, QuestionContainer, AnswerContainer } from './styles';
-import { icons } from '../../assets';
+import React, { useState } from "react";
+import { FiChevronUp } from "react-icons/fi";
 
-export default function QuestionCard({ data, index, language }) {
+import { useLanguage } from "../../context/LanguageContext";
+import { Container, QuestionContainer, AnswerContainer, ArrowButton } from "./styles";
+
+export default function QuestionCard({ data, index }) {
+  const { language } = useLanguage();
   const [showAnswer, setShowAnswer] = useState(false);
+
+  function chooseLanguage() {
+    // eslint-disable-next-line default-case
+    switch(language){
+      case "portuguese":
+        return "pt";
+      case "english":
+        return "en";
+      case "spanish":
+        return "es";
+    }
+  }
   return (
     <Container>
       <QuestionContainer>
         <p>
-          <span>{`Q${index + 1}:`}</span> {` ${data[`pergunta_${language}`]}`}
+          <span>{`Q${index + 1}:`}</span> {` ${data[`pergunta_${chooseLanguage()}`]}`}
         </p>
-        <button
-          style={{
-            backgroundColor: 'transparent',
-            color: '#666666',
-            size: '50px',
-          }}
+        <ArrowButton
+          onClick={() => setShowAnswer(!showAnswer)}
+          showAnswer={showAnswer}
         >
-          {showAnswer ? (
-            <FiChevronUp
-              color="#323c47"
-              size={24}
-              onClick={() => setShowAnswer(!showAnswer)}
-            />
-          ) : (
-            <FiChevronDown
-              color="#323c47"
-              size={24}
-              onClick={() => setShowAnswer(!showAnswer)}
-            />
-          )}
-        </button>
+    
+          <FiChevronUp
+            color="#323c47"
+            size={24}
+          />
+          
+        </ArrowButton>
       </QuestionContainer>
       {showAnswer && (
         <AnswerContainer>
           <p>
-            <span>R:</span> {` ${data[`resposta_${language}`]}`}
+            <span>R:</span> {` ${data[`pergunta_${chooseLanguage()}`]}`}
           </p>
-          <button>
-            <Link
-              style={{
-                textDecoration: 'none',
-              }}
-              to={{
-                pathname: "/editar-pergunta",
-                state: {
-                  data,
-                },
-              }}
-            >
-              <HiPencil
-                color="black"
-                opacity={0.24}
-              />
-            </Link>
-          </button>
         </AnswerContainer>
       )}
     </Container>

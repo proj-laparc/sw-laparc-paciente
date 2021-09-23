@@ -1,61 +1,23 @@
-import styled from 'styled-components';
-import {Page } from 'react-pdf';
-
-
-export const StyledPage = styled(Page)`
-  canvas{
-    @media(max-width: 800px){
-      width: 100% !important;
-      height: 120vw !important;
-    }
-  }
-`
-
-export const Container = styled.div`
-  background: #ffffff;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.14);
-  width: 90%;
-  display: flex;
-  border-radius: 8px;
-  margin-bottom: 36px;
-  justify-content: center;
-`;
+import styled from "styled-components";
 
 export const TitleContainer = styled.div`
   flex-direction: row;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 80px 0px 40px;
-  @media(max-width: 800px){
-    padding: 20px 40px 0px 20px;
-  }
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
 
-  h1 {
+  h2 {
     font-weight: bold;
-    font-size: 23px;
+    font-size: 20px;
     letter-spacing: 0.01em;
     color: #323c47;
-    @media(max-width: 800px){
-      font-size: 20px;
-  }
-  }
-`;
-
-export const IconButton = styled.button`
-  width: 0px;
-  height: 0px;
-
-  button:hover {
-    filter: brightness(100%);
-  }
-
-  path {
-    transition: opacity 0.2s;
-  }
-
-  path:hover {
-    opacity: 0.3;
+    text-align: center;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `;
 
@@ -64,46 +26,41 @@ export const ContentContainer = styled.div`
   display: flex;
   width: 100%;
 `;
- 
-export const PdfContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  flex-direction: column;
-  width: 100%;
-  div {
-    display: flex;
-    box-shadow: ${props =>
-      props.loading
-        ? '0px 0px 16px rgba(0, 0, 0, 0.14)'
-        : '0px 0px 0px rgba(0, 0, 0, 0)'};
-  }
 
-  button {
-    background-color: transparent;
-    display: flex;
-    align-items: center;
+export const PdfContainer = styled.div`
+  height: 220px;
+  width: 160px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  :hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
   }
 `;
-
-
 
 export const PaginationContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 10px;
+  align-self: center;
 `;
 
-export const Subtitle = styled.h1`
+export const Subtitle = styled.h3`
   text-align: center;
-  font-size: 19px;
+  font-size: 12px;
   color: #334d6e;
 `;
 
 export const LoadingContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
-  height: ${props => (props.error ? 350 : 745)}px;
   align-items: center;
+  justify-content: center;
+  height: 220px;
 `;

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Route as ReactDOMRoute, Redirect } from 'react-router-dom';
+import React from "react";
+import { Route as ReactDOMRoute, Redirect } from "react-router-dom";
 
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from "../context/AuthContext";
 
 export default function Route({
   isPrivate = false,
@@ -41,8 +41,8 @@ export default function Route({
         ) : (
           <Redirect
             to={{
-              pathname: isPrivate ? '/' : "/pacientes",
-              state: { from: location },
+              pathname: isPrivate ? "/" : "/home",
+              state: { from: location }
             }}
           />
         )

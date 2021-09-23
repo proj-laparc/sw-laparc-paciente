@@ -1,85 +1,45 @@
-import styled from 'styled-components';
-
-export const Container = styled.div`
-  background: #ffffff;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.14);
-  width: 90%;
-  display: flex;
-  border-radius: 8px;
-  margin-bottom: 36px;
-  justify-content: center;
-`;
+import styled from "styled-components";
 
 export const TitleContainer = styled.div`
-  flex-direction: row;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 80px 0px 40px;
-  @media(max-width: 800px){
-    padding: 20px 40px 0px 20px;
-  }
+  margin-top: 26px;
+  width: 100%;
+  justify-content: center;
 
-  h1 {
+  h2 {
     font-weight: bold;
-    font-size: 23px;
+    font-size: 20px;
     letter-spacing: 0.01em;
     color: #323c47;
-    @media(max-width: 800px){
-      font-size: 20px;
-      
-    }
-  }
-`;
-
-export const IconButton = styled.button`
-  width: 0px;
-  height: 0px;
-
-  button:hover {
-    filter: brightness(100%);
-  }
-
-  path {
-    transition: opacity 0.2s;
-  }
-
-  path:hover {
-    opacity: 0.3;
+    text-align: center;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `;
 
 export const ContentContainer = styled.div`
   flex-direction: column;
+  align-items: center;
   display: flex;
   width: 100%;
 
-  div {
-    padding-bottom: 17px;
-  }
-  img{
-    width: 100%;
-    height: 100%;
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
-export const ButtonsContainer = styled.div`
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-`;
+export const Image = styled.img`
+  margin-top: 24px;
+  max-height: 227px;
+  width: 90%;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
-export const ViewButton = styled.button`
-  color: #fff;
-  font-weight: 500;
-  font-size: 12px;
-  text-align: center;
-  letter-spacing: 0.02em;
-  background: var(--primary);
-  border-radius: 4px;
-  width: 150px;
-  height: 35px;
-  margin-bottom: 16px;
+  :hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+  }
 `;
