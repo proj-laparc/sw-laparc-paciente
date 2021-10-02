@@ -80,13 +80,13 @@ export default function OurStory() {
               <h3>{data[language]}</h3>
             </Description>
             <div style={{marginTop: 20}}>
-              <PicturesContainer length={data.fotos.slice(0,2).length}>
-                {data.fotos.slice(0,2).map((foto, index) => (
+              <PicturesContainer length={data.fotos?.slice(0,2).length}>
+                {data.fotos?.slice(0,2).map((foto, index) => (
                   <Picture src={foto.image_url} key={index}/>
                 ))}
               </PicturesContainer>
-              <PicturesContainer length={data.fotos.slice(2,4).length}>
-                {data.fotos.slice(2,4).map((foto,index) => (
+              <PicturesContainer length={data.fotos?.slice(2,4).length}>
+                {data.fotos?.slice(2,4).map((foto,index) => (
                   <Picture src={foto.image_url} key={index}/>
                 ))}
               </PicturesContainer>

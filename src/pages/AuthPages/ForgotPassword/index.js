@@ -32,7 +32,7 @@ export default function ForgotPassword() {
     try {
       const data = {
         email,
-        link: `https://laparc-paciente.netlify.app${routes.redefinePassword[language]}/forgot/`,
+        link: `https://laparc.com.br/${routes.redefinePassword[language]}/`,
       };
       const response = await api.post("/pacientes/esqueci-minha-senha", data);
       addToast({
