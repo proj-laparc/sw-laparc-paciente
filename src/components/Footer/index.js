@@ -186,8 +186,8 @@ export default function Footer() {
               {nationalSubtitles.map((subtitle) => (
                 <li key={subtitle.id.toString()}>
                   <h3>
-                    {subtitle.name[language]} :{" "}
-                    <Link href={subtitle.link}>{subtitle.link}</Link>
+                    
+                    <Link href={subtitle.link}>{subtitle.name[language]}</Link>
                   </h3>
                 </li>
               ))}
@@ -199,8 +199,8 @@ export default function Footer() {
               {internationalSubtitles.map((subtitle) => (
                 <li key={subtitle.id.toString()}>
                   <h3>
-                    {subtitle.name[language]} :{" "}
-                    <Link href={subtitle.link}>{subtitle.link}</Link>
+                   
+                    <Link href={subtitle.link}> {subtitle.name[language]}</Link>
                   </h3>
                 </li>
               ))}

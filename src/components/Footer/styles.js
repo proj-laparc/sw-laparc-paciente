@@ -12,7 +12,7 @@ export const MainInformationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media(max-width: 1000px){
+  @media(max-width: 1200px){
     flex-direction: column;
     height: 100%;
     align-items: flex-start;
@@ -28,7 +28,7 @@ export const InformationContainer = styled.div`
   align-items: center;
   justify-content: center;
   border-right: 2px solid #84000a;
-  @media(max-width: 1000px){
+  @media(max-width: 1200px){
     border: none;
     width: 100%;
     padding: 10px;
@@ -39,7 +39,7 @@ export const InformationContainer = styled.div`
       font-size: 16px;
       line-height: 27px;
       color: #ffffff;
-      @media(max-width: 1000px){
+      @media(max-width: 1200px){
         line-height: 20px;
         font-size: 15px;
       }
@@ -52,7 +52,7 @@ export const ContactsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media(max-width: 1000px){
+  @media(max-width: 1200px){
     border: none;
     width: 100%;
     border-bottom: 1px solid #fff;
@@ -82,7 +82,7 @@ export const LanguagesContainer = styled.div`
   button + button{
     margin-left:10px;
   }
-  @media(max-width: 1000px){
+  @media(max-width: 1200px){
     align-self:center;
     button + button{
     margin-left:30px;
@@ -94,7 +94,7 @@ export const RightMainInformation = styled.div`
   display: flex;
   justify-content: space-between;
   width: 40%;
-  @media(max-width: 1000px){
+  @media(max-width: 1200px){
     flex-direction: column;
     width: 100%;
   }
@@ -113,7 +113,8 @@ export const LanguageButton = styled.button`
 
 export const LinksContainer = styled.div`
   margin-top: 20px;
-  @media(max-width: 1000px){
+
+  @media(max-width: 800px){
     display: none;
   }
   h1 {
@@ -126,6 +127,7 @@ export const LinksContainer = styled.div`
   section {
     display: flex;
     margin-top: 5px;
+    justify-content: space-between;
   }
 
   h2 {
@@ -137,6 +139,8 @@ export const LinksContainer = styled.div`
 export const NationalContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 55%;
+  border-right: 2px solid #84000a;
 
   ul {
     margin-top: 5px;
@@ -153,6 +157,8 @@ export const NationalContainer = styled.div`
 `;
 
 export const InternationalContainer = styled(NationalContainer)`
+  width: 40%;
+  border-right: none;
 `;
 
 export const Link = styled.a.attrs({
