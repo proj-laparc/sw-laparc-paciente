@@ -112,7 +112,7 @@ export default function Footer() {
     {
       id: 4,
       name: {
-        portuguese: "Sociedade Européia de Cardiologia",
+        portuguese: "Sociedade Europeia de Cardiologia",
         english: "European Society of Cardiology",
         spanish: "Sociedad Europea de Cardiología",
       },
