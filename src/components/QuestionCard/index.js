@@ -40,7 +40,7 @@ export default function QuestionCard({ data, index }) {
       {showAnswer && (
         <AnswerContainer>
           <p>
-            <span>R:</span> {` ${data[`pergunta_${chooseLanguage()}`]}`}
+            <span>R:</span> {` ${data[`resposta_${chooseLanguage()}`]}`}
           </p>
         </AnswerContainer>
       )}
