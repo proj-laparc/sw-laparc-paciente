@@ -41,7 +41,7 @@ export default function Route({
         ) : (
           <Redirect
             to={{
-              pathname: isPrivate ? "/" : "/home",
+              pathname:  "/",
               state: { from: location }
             }}
           />

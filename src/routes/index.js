@@ -30,7 +30,7 @@ export default function Routes() {
       <ReactDOMRoute path={["/quem-somos","/about-us","/quienes-somos"]} component={AboutUs} />
       <ReactDOMRoute path={["/perguntas-frequentes","/common-questions", "/preguntas-frecuentes"]} component={Faq} />
       <ReactDOMRoute path={["/fale-conosco","/contact-us", "/hablar-con-nosotros"]} component={ContactUs} />
-      <ReactDOMRoute path={["/perfil", "/profile"]} component={Profile} />
+      <Route path={["/perfil", "/profile"]} component={Profile} isPrivate/>
 
       <ReactDOMRoute path={["/entrar", "/login", "/acceso"]} component={Login} />
       <ReactDOMRoute path={["/esqueci-senha", "/forgot-password", "/olvide-contrasena"]} component={ForgotPassword} />

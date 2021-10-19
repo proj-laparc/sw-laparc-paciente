@@ -32,9 +32,9 @@ export default function ForgotPassword() {
     try {
       const data = {
         email,
-        link: `https://laparc.com.br/${routes.redefinePassword[language]}/`,
+        link: `https://laparc.com.br${routes.redefinePassword[language]}/active/`,
       };
-      const response = await api.post("/pacientes/esqueci-minha-senha", data);
+      await api.post("/pacientes/esqueci-minha-senha", data);
       addToast({
         type: "info",
         title:
