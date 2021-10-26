@@ -25,6 +25,7 @@ export const Dashboard = styled.div`
 export const Description = styled.div`
   margin-top: 40px;
   padding: 0px 42px;
+  white-space:pre-wrap;
   @media(max-width: 800px){
     padding: 0px 20px;
   }
