@@ -1,5 +1,6 @@
 import React, { createContext, useCallback, useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
+import { routes } from "../constants/Languages";
 
 import api from "../services/api";
 import { useToast } from "./ToastContext";
@@ -32,14 +33,13 @@ export function AuthProvider({ children }) {
     return {};
   });
 
-  const signIn = useCallback(async (data, setLoading) => {
+  const signIn = useCallback(async (data, setLoading, language='portuguese') => {
     setLoading(true);
     try {
       const response = await api.post("/pacientes/login", data);
       const { token, refresh_token } = response.data[0];
       const user = response.data[1];
-
-      history.push("/");
+     
       addToast({
         type: "success",
         title: "Login efetuado com sucesso",
@@ -51,6 +51,7 @@ export function AuthProvider({ children }) {
       setToken(token);
       setRefreshToken(refreshToken);
       setUser(user);
+      history.push(`${routes.profile[language]}`);
     } catch (err) {
       if (err.response?.data && err.response?.data?.error ) {
         if (err?.response?.data?.error?.includes("email ou senha incorretos")) {

@@ -52,7 +52,7 @@ export default function Login() {
       email,
       senha: password,
     };
-    signIn(data, setLoading);
+    signIn(data, setLoading, language);
   }
  
   return (
