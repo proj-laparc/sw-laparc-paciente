@@ -62,7 +62,7 @@ export const ProfileImageContainer = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   background-color: #99a3ae;
   justify-content: center;
   align-items: center;
@@ -84,17 +84,17 @@ export const LabelContainer = styled.div`
   p {
     color: #818e9b;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 18px;
   }
 
   h3 {
     font-weight: 500;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
-    max-width: 250px;
+    max-width: 320px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -150,7 +150,7 @@ export const MedicalDateContainer = styled.div`
 
   h3 {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
@@ -191,7 +191,7 @@ export const ActionsContainer = styled.div`
 
   span {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     color: #919ca7;
   }
 
@@ -220,7 +220,7 @@ export const FormsContainer = styled.div`
 
   p {
     color: #000000;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     width: 100px;
     display: -webkit-box;
@@ -233,7 +233,7 @@ export const FormsContainer = styled.div`
 
   h3 {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
@@ -270,7 +270,7 @@ export const ReportContainer = styled.div`
   a {
     p {
       color: #000000;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 400;
       width: 95px;
       display: -webkit-box;
@@ -284,7 +284,7 @@ export const ReportContainer = styled.div`
 
   h3 {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
@@ -297,7 +297,7 @@ export const ObsContainer = styled.div`
   p {
     color: #818e9b;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
   }
 

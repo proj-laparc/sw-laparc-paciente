@@ -17,10 +17,10 @@ export const Dashboard = styled.div`
   margin-bottom: 60px;
   justify-content: ${(props) => (props.loading ? "center" : "flex-start")};
   height: 80%;
-  padding: 60px 30px;
+  padding: 50px 30px;
   border-radius: 7.5px;
   @media(max-width: 800px){
-    padding: 0 10px;
+    padding: 20px 10px;
     flex-direction: column;
     align-items: center;
   }
@@ -61,7 +61,7 @@ export const ProfileImageContainer = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   background-color: #99a3ae;
   justify-content: center;
   align-items: center;
@@ -81,13 +81,13 @@ export const LabelContainer = styled.div`
   p {
     color: #818e9b;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
   }
 
   h3 {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
@@ -146,7 +146,7 @@ export const MedicalDateContainer = styled.div`
 
   h3 {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
@@ -188,7 +188,7 @@ export const ActionsContainer = styled.div`
 
   span {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     color: #919ca7;
   }
 
@@ -217,7 +217,7 @@ export const FormsContainer = styled.div`
 
   p {
     color: #000000;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     width: 100px;
     display: -webkit-box;
@@ -230,7 +230,7 @@ export const FormsContainer = styled.div`
 
   h3 {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
@@ -267,7 +267,7 @@ export const ReportContainer = styled.div`
   a {
     p {
       color: #000000;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 400;
       width: 95px;
       display: -webkit-box;
@@ -281,7 +281,7 @@ export const ReportContainer = styled.div`
 
   h3 {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
@@ -293,7 +293,7 @@ export const ObsContainer = styled.div`
   p {
     color: #818e9b;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
   }
 
@@ -343,7 +343,7 @@ export const InputContainer = styled.div`
   p {
     color: var(--primary);
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
   }
 
@@ -351,13 +351,14 @@ export const InputContainer = styled.div`
     border-color: #818e9b90;
     border-width: 0px 0px 1.4px 0px;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 22px;
     color: #323c47;
-    width: 300px;
+    width: 350px;
+    max-width: 100%;
     padding: 4px 0px 3px 0px;
-    @media(max-width:500px){
-      width: 90%;
+    @media(max-width:768px){
+      width: 330px;
     }
   }
 `;
@@ -371,7 +372,7 @@ export const ButtonsContainer = styled.div`
 
 
 export const EditButton = styled.button`
-  width: 160px;
+  width: 170px;
   height: 42px;
   margin-left: 10px;
   background: var(--primary);
@@ -380,15 +381,24 @@ export const EditButton = styled.button`
 
   p {
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 19px;
     text-align: center;
     letter-spacing: 0.01em;
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
   }
+  @media (max-width: 768px) {
+      width: 160px;
+      p{
+        font-size: 12px;
+      } 
+    }
 `;
 
 export const CancelButton = styled.button`
-  width: 160px;
+  width: 170px;
   height: 42px;
 
   background-color: white;
@@ -401,11 +411,17 @@ export const CancelButton = styled.button`
   p {
     color: var(--primary);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 19px;
     text-align: center;
     letter-spacing: 0.01em;
   }
+  @media (max-width: 768px) {
+      width: 160px;
+      p{
+        font-size: 12px;
+      } 
+    }
 
   :hover {
     filter: brightness(100%) opacity(0.7);

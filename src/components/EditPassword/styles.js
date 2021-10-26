@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const EditionDashboard = styled.div`
   background-color: #fff;
-  width: 85%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 30px;
@@ -15,7 +15,7 @@ export const InputContainer = styled.div`
   p {
     color: var(--primary);
     font-weight: 500;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 16px;
     letter-spacing: 0.01em;
   }
@@ -24,28 +24,28 @@ export const InputContainer = styled.div`
     border-color: #818e9b90;
     border-width: 0px 0px 1.4px 0px;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
-    width: 300px;
+    width: 350px;
+    max-width: 100%;
     padding: 6px 0px 3px 0px;
-    @media(max-width:500px){
-      width: 90%;
+    @media(max-width:768px){
+      width: 330px;
     }
   }
 `;
 
 export const ButtonsContainer = styled.div`
   margin-top:  40px;
-  flex: row;
   display: flex;
   justify-content: flex-start;
  
 `;
 
 export const EditButton = styled.button`
-  width: 160px;
+  width: 170px;
   height: 42px;
   margin: 0  0 0 15px;
   background: var(--primary);
@@ -54,15 +54,21 @@ export const EditButton = styled.button`
 
   p {
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 19px;
     text-align: center;
     letter-spacing: 0.01em;
   }
+  @media (max-width: 768px) {
+      width: 160px;
+      p{
+        font-size: 12px;
+      } 
+    }
 `;
 
 export const CancelButton = styled.button`
-  width: 160px;
+  width: 170px;
   height: 42px;
 
   background-color: white;
@@ -79,7 +85,14 @@ export const CancelButton = styled.button`
     line-height: 19px;
     text-align: center;
     letter-spacing: 0.01em;
+    
   }
+  @media (max-width: 768px) {
+      width: 160px;
+      p{
+        font-size: 12px;
+      } 
+    }
 
   :hover {
     filter: brightness(100%) opacity(0.7);
