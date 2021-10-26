@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   min-height: 100vh;
-  min-width: 100vw;
+  max-width: 100vw;
   background-color: #eee;
 `
 
@@ -72,7 +72,7 @@ export const LoadingContainer = styled.div`
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  min-width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
 `;
 
