@@ -167,6 +167,9 @@ export const MedicalDateContainer = styled.div`
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
     @media(max-width: 800px){
       font-size: 14px;
       line-height: 16px;
@@ -267,6 +270,9 @@ export const FormsContainer = styled.div`
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
     @media(max-width: 800px){
       font-size: 14px;
       line-height: 16px;
@@ -330,6 +336,9 @@ export const ReportContainer = styled.div`
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
     @media(max-width: 800px){
       font-size: 14px;
       line-height: 16px;
@@ -356,6 +365,9 @@ export const ObsContainer = styled.div`
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin-bottom: 15px;
     @media(max-width: 800px){
       font-size: 14px;
