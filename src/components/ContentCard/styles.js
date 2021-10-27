@@ -25,6 +25,6 @@ export const Container = styled.div`
   justify-content: center;
   height: 320px;
   width: 320px;
-  border-radius: 18px;
-  
+  max-width: 95vw;
+  border-radius: 18px;  
 `;

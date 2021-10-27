@@ -18,6 +18,9 @@ export const TitleContainer = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    @media(max-width:350px){
+      font-size: 16px;
+    }
   }
 `;
 

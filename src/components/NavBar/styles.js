@@ -45,6 +45,9 @@ export const SmallDevicesContainer = styled.div`
       color: #99A3AE;
       font-size: 22px;
       font-weight:600;
+      @media(max-width: 350px){
+        font-size: 18px;
+      }
     }
 `
 function renderActive(selected) {
