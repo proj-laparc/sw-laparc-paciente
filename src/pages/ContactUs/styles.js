@@ -10,6 +10,7 @@ export const Container = styled.div`
 
 export const Dashboard = styled.div`
   width: 90vw;
+  max-width: 1500px;
   margin: 15px auto 60px;
   background-color: #fff;
   display: flex;
