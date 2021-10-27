@@ -5,11 +5,12 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   background-color: #eeeeee;
-  min-height: 800px;
+  height: 100%;
 `;
 
 export const Dashboard = styled.div`
   width: 90vw;
+  max-width: 1500px;
   margin-top: 15px;
   background-color: #fff;
   display: flex;
@@ -84,20 +85,28 @@ export const LabelContainer = styled.div`
   p {
     color: #818e9b;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 20px;
+    @media(max-width: 800px){
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
   h3 {
     font-weight: 500;
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 17px;
+    line-height: 24px;
     letter-spacing: 0.01em;
     color: #323c47;
-    max-width: 320px;
+    max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    @media(max-width: 800px){
+      font-size: 15px;
+      line-height: 22px;
+    }
   }
 `;
 
@@ -114,11 +123,14 @@ export const OptionsContainer = styled.div`
     margin-top: 8px;
 
     h3 {
-      font-size: 15px;
+      font-size: 17px;
       line-height: 22px;
       letter-spacing: 0.01em;
       color: var(--primary);
       font-weight: 500;
+      @media(max-width: 800px){
+        font-size: 15px;
+      }
     }
   }
 
@@ -144,16 +156,22 @@ export const MedicalDateContainer = styled.div`
   h1 {
     color: #919ca7;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 27px;
+    @media(max-width: 800px){
+      font-size: 18px;
+    }
   }
 
   h3 {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
+    @media(max-width: 800px){
+      font-size: 14px;
+    }
   }
 `;
 
@@ -191,8 +209,11 @@ export const ActionsContainer = styled.div`
 
   span {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     color: #919ca7;
+    @media(max-width: 800px){
+      font-size: 14px;
+    }
   }
 
   button {
@@ -212,15 +233,18 @@ export const FormsContainer = styled.div`
 
   h2 {
     color: #919ca7;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 27px;
     margin-bottom: 10px;
+    @media(max-width: 800px){
+      font-size: 16px;
+    }
   }
 
   p {
     color: #000000;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     width: 100px;
     display: -webkit-box;
@@ -229,14 +253,20 @@ export const FormsContainer = styled.div`
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
+    @media(max-width: 800px){
+      font-size: 14px;
+    }
   }
 
   h3 {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
+    @media(max-width: 800px){
+      font-size: 14px;
+    }
     
   }
 `;
@@ -261,16 +291,19 @@ export const ReportContainer = styled.div`
 
   h2 {
     color: #919ca7;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 27px;
     margin-bottom: 10px;
+    @media(max-width: 800px){
+      font-size: 16px;
+    }
   }
 
   a {
     p {
       color: #000000;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 400;
       width: 95px;
       display: -webkit-box;
@@ -279,15 +312,21 @@ export const ReportContainer = styled.div`
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: center;
+      @media(max-width: 800px){
+      font-size: 14px;
+    }
     }
   }
 
   h3 {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
+    @media(max-width: 800px){
+      font-size: 14px;
+    }
   }
 `;
 
@@ -297,17 +336,23 @@ export const ObsContainer = styled.div`
   p {
     color: #818e9b;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
+    @media(max-width: 800px){
+      font-size: 14px;
+    }
   }
 
   h3 {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
     margin-bottom: 15px;
+    @media(max-width: 800px){
+      font-size: 14px;
+    }
   }
 `;
 
@@ -327,12 +372,19 @@ export const TitleContainer = styled.div`
 
 export const IconButton = styled.button`
   margin: 15px 15px 0 0;
+  border-radius:100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
   button:hover {
     filter: brightness(100%);
   }
 
   path {
-    transition: opacity 0.2s;
+    transition: opacity 0.4s;
   }
 
   path:hover {

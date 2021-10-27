@@ -5,11 +5,12 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   background-color: #eeeeee;
-  min-height: 800px;
+  height: 100%;
 `;
 
 export const Dashboard = styled.div`
   width: 90vw;
+  max-width: 1500px;
   margin-top: 15px;
   background-color: #fff;
   display: flex;
@@ -81,13 +82,17 @@ export const LabelContainer = styled.div`
   p {
     color: #818e9b;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 18px;
+    @media(max-width: 800px){
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   h3 {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
@@ -95,6 +100,10 @@ export const LabelContainer = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    @media(max-width: 800px){
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 `;
 
@@ -110,11 +119,15 @@ export const OptionsContainer = styled.div`
     margin-top: 8px;
 
     h3 {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.01em;
       color: var(--primary);
       font-weight: 500;
+      @media(max-width: 800px){
+        font-size: 14px;
+        line-height: 20px;
+    }
     }
   }
 
@@ -140,16 +153,24 @@ export const MedicalDateContainer = styled.div`
   h1 {
     color: #919ca7;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 27px;
+    @media(max-width: 800px){
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   h3 {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
+    @media(max-width: 800px){
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 `;
 
@@ -188,8 +209,12 @@ export const ActionsContainer = styled.div`
 
   span {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     color: #919ca7;
+    @media(max-width: 800px){
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   button {
@@ -209,15 +234,19 @@ export const FormsContainer = styled.div`
 
   h2 {
     color: #919ca7;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 27px;
     margin-bottom: 10px;
+    @media(max-width: 800px){
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   p {
     color: #000000;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     width: 100px;
     display: -webkit-box;
@@ -226,14 +255,22 @@ export const FormsContainer = styled.div`
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
+    @media(max-width: 800px){
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   h3 {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
+    @media(max-width: 800px){
+      font-size: 14px;
+      line-height: 16px;
+    }
     
   }
 `;
@@ -258,10 +295,14 @@ export const ReportContainer = styled.div`
 
   h2 {
     color: #919ca7;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 27px;
     margin-bottom: 10px;
+    @media(max-width: 800px){
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   a {
@@ -276,15 +317,23 @@ export const ReportContainer = styled.div`
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: center;
+      @media(max-width: 800px){
+        font-size: 14px;
+        line-height: 16px;
+    }
     }
   }
 
   h3 {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
+    @media(max-width: 800px){
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 `;
 export const ObsContainer = styled.div`
@@ -293,17 +342,25 @@ export const ObsContainer = styled.div`
   p {
     color: #818e9b;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 18px;
+    @media(max-width: 800px){
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   h3 {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
     margin-bottom: 15px;
+    @media(max-width: 800px){
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 `;
 
@@ -343,20 +400,28 @@ export const InputContainer = styled.div`
   p {
     color: var(--primary);
     font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 18px;
+    @media(max-width: 800px){
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   input {
     border-color: #818e9b90;
     border-width: 0px 0px 1.4px 0px;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 24px;
     color: #323c47;
     width: 350px;
     max-width: 100%;
     padding: 4px 0px 3px 0px;
+    @media(max-width: 800px){
+      font-size: 14px;
+      line-height: 20px;
+    }
     @media(max-width:768px){
       width: 330px;
     }

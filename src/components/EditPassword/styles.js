@@ -15,22 +15,28 @@ export const InputContainer = styled.div`
   p {
     color: var(--primary);
     font-weight: 500;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 16px;
     letter-spacing: 0.01em;
+    @media(max-width: 800px){
+        font-size: 15px;
+      }
   }
 
   input {
     border-color: #818e9b90;
     border-width: 0px 0px 1.4px 0px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #323c47;
     width: 350px;
     max-width: 100%;
     padding: 6px 0px 3px 0px;
+    @media(max-width: 800px){
+        font-size: 16px;
+      }
     @media(max-width:768px){
       width: 330px;
     }
@@ -81,7 +87,7 @@ export const CancelButton = styled.button`
   p {
     color: var(--primary);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 19px;
     text-align: center;
     letter-spacing: 0.01em;
