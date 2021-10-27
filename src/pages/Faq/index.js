@@ -3,6 +3,7 @@ import Lottie from "react-lottie";
 
 import {
   Container,
+  Content,
   QuestionsDashboard,
   LoadingContainer,
   Subtitle
@@ -40,7 +41,7 @@ export default function Faq() {
 
   useEffect(() => {
     loadQuestions();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -49,10 +50,11 @@ export default function Faq() {
         selectedOption="faq"
         title={faq.title[language]}
         openMenu={openMenu} setOpenMenu={setOpenMenu}
-        />
-        <SideBar open={openMenu} activeOption="faq"/>
-        <Cover open={openMenu} onClick={() => setOpenMenu(false)}/>
-      
+      />
+      <SideBar open={openMenu} activeOption="faq" />
+      <Cover open={openMenu} onClick={() => setOpenMenu(false)} />
+
+      <Content>
         <QuestionsDashboard>
           {loading ? (
             <LoadingContainer>
@@ -79,6 +81,7 @@ export default function Faq() {
             </section>
           )}
         </QuestionsDashboard>
+      </Content>
       <Footer />
     </Container>
   );

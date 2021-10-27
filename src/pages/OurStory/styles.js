@@ -5,11 +5,12 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   background-color: #eeeeee;
-  min-height: 800px;
+  height: 100%;
 `;
 
 export const Dashboard = styled.div`
   width: 90vw;
+  max-width: 1500px;
   margin-top: 15px;
   background-color: #fff;
   display: flex;

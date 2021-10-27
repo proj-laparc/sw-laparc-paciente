@@ -2,10 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: #f7685b;
-  height: 100%;
+  //height: 100%;
   max-width: 100vw;
   padding: 20px;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  left: 0;
 `;
+
 
 export const MainInformationContainer = styled.div`
   height: 140px;
