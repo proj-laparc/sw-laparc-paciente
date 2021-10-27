@@ -41,6 +41,9 @@ export const ContactsContainer = styled.ul`
       font-weight: 500;
       font-size: 24px;
       text-align: center;
+      @media (max-width: 800px) {
+        font-size: 18px;
+      }
     }
 
     img {
@@ -74,8 +77,11 @@ export const MessageContainer = styled.div`
     font-weight: 500;
     font-size: 27px;
     align-self: center;
+    @media (max-width: 800px) {
+      font-size: 20px;
+    }
   }
-`;
+`
 
 export const InputsContainer = styled.ul`
   list-style-type: none;

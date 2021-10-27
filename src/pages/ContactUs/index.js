@@ -118,6 +118,8 @@ export default function ContactUs() {
         return <HiOutlineMail size={22} color={"#000000"} />;
       case "FiPhone":
         return <FiPhone size={22} color={"#000000"} />;
+      default:
+        return null;
     }
   }
 
